@@ -33,7 +33,7 @@ all = merge(dem,
             merge(cog, gen, by="subID"), 
             by.x="subject_ID",by.y="subID")
 
-write.csv(cog, "clean_cognitive.csv", row.names=F)
-write.csv(gen, "clean_genotype.csv", row.names=F)
-write.csv(dem, "clean_demographic.csv", row.names=F)
-write.csv(all, "clean_all.csv", row.names=F)
+write.csv(cog, "cognitive.csv", row.names=F)
+write.csv(gen, "genotype.csv", row.names=F)
+write.csv(dem, "demographic.csv", row.names=F)
+write.csv(all, "all.csv", row.names=F)
