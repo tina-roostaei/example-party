@@ -11,10 +11,11 @@ dem[dem==""] = NA
 dem[dem=="missing"] = NA
 dem[dem=="9999"] = NA
 dem$age = as.numeric(as.character(dem$age))
-dem$ethnicity = factor(dem$ethnicity,levels=c("Cauc","AA","As","In","Other"))
-dem$sex = factor(dem$sex, levels=c(0,1), labels=c("Male","Female"))
+dem$ethnicity = factor(dem$ethnicity,levels=c("White","Asian","Black or African American","Hispanic or Latino","American Indian or Alaska Native"))
+dem$sex = factor(dem$sex, levels=c("M","F"))
 dem$dx = factor(dem$dx, levels=c(0,1), labels=c("Control","Case"))
-dem$subject_ID = gsub(dem$subject_ID,pattern="SUB_",replacement="subject")
+dem$site = factor(dem$site, levels=c(1, 2, 3), labels=c("Toronto","Montreal", "Vancouver"))
+dem$smoke = factor(dem$smoke, levels=c(0,1), labels=c("Non-smoker","Smoker"))
 
 gen[gen==""] = NA
 gen[gen=="missing"] = NA
@@ -27,6 +28,7 @@ cog[cog=="9999"] = NA
 cog$cog1 = as.numeric(as.character(cog$cog1))
 cog$cog2 = as.numeric(as.character(cog$cog2))
 cog$cog3 = as.numeric(as.character(cog$cog3))
+cog$CGI = as.numeric(as.character(cog$CGI))
 
 
 all = merge(dem,
