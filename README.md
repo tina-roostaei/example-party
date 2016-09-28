@@ -6,15 +6,12 @@ This is sample project data to be used by the CAMH SCWG workshops.
 There are 350 subjects (ID: subject1 .. subject350), and the data is organized
 like so: 
 
-    data/
+    cleaned_data/
         demographic.csv 
         genotype.csv
         cognitive.csv
         structural/
             subject1_t1.nii.gz
-            ...
-        functional/
-            subject1_epi.nii.gz
             ...
         <other-datatype>/
             ...
